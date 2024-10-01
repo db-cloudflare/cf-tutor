@@ -2,12 +2,21 @@
   "name": "cf-tutor",
   "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "start": "tsx src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "challenge_files/",
+    "media/",
+    "node_modules/",
+    "progress/",
+    "scaffolding/",
+    "src/",
+    "tsconfig.json"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
