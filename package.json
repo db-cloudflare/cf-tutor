@@ -2,11 +2,20 @@
   "name": "cf-tutor",
   "version": "1.1.0",
   "description": "",
-  "main": "src/index.js",
-  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "start": "tsx src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean"
   },
   "files": [
     "challenge_files/",
@@ -36,6 +45,7 @@
     "@types/inquirer": "^9.0.7",
     "@types/shelljs": "^0.8.15",
     "cross-env": "^7.0.3",
+    "tsup": "^8.3.0",
     "tsx": "^4.15.7"
   }
 }
