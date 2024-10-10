@@ -45,12 +45,11 @@ ${chalk.green(`//Todo - add default function`)}
 `;
 
 const workerCodeBlock2 = `
-${chalk.blue('  export default {')}
+${chalk.blue('export default {')}
 ${chalk.blue('  async fetch(request, env): Promise<Response> {')}
-${chalk.blue(`    const response = await env.AI.run('@cf/meta/llama-3.1-8b-instruct',`)}
-${chalk.blue('        prompt: "What is the origin of the phrase Hello, World"')}
-${chalk.blue(`      }`)}
-${chalk.blue(`    );`)}
+${chalk.blue(`    const response = await env.AI.run("@cf/meta/llama-3.1-8b-instruct", {`)}
+${chalk.blue('      prompt: "What is the origin of the phrase Hello, World",')}
+${chalk.blue(`    });`)}
 ${chalk.blue(``)}
 ${chalk.blue(`    return new Response(JSON.stringify(response));`)}
 ${chalk.blue(`  },`)}
@@ -99,12 +98,12 @@ export const aiQuiz: Quiz = {
             correctAnswer: '',
         },
         {
-            question: `\n${intro2} \n\nLet's create a Worker that can send a prompt to a Large Language Model and recieve a response from the model. We will also look at how to instruct the model to respond in a specified way.\n\nPress 'enter' to continue\n\n`,
+            question: `\n${intro2} \n\nLet's create a Worker that can send a prompt to a Large Language Model and recieve a response from the model. We will also look at how to instruct the model to respond in a specified way.\n\nPress 'Enter' to continue\n\n`,
             type: 'text',
             correctAnswer: '',
         },
         {
-            question: `\n${intro3} \n\nTo do this, we will first create our Worker that will query the AI models available on Cloudflare. In this terminal below, enter the following to create your worker: \n${c3command}\nAfter running this command, for the purposes of this tutorial you want to select the following options:\n\n 1. Directory/application name: ai-cli-tutorial\n 2. Create a Hello World Worker\n 3. Select Typescript\n 4. No to connecting to Github\n 5. No to Deploying\n\n`,
+            question: `\n${intro3} \n\nTo do this, we will first create our Worker that will query the AI models available on Cloudflare. In this terminal below, enter the following to create your worker: \n${c3command}\nAfter running this command, for the purposes of this tutorial you want to select the following options:\n\n 1. Directory name: ai-cli-tutorial\n 2. Category: Hello World example\n 3. Template: Hello World Worker\n 3. Language: Typescript\n 5. No to Deploying\n\n`,
             type: 'text',
             correctAnswer: 'npm create cloudflare',
             npmCommand: ['npm', 'create', 'cloudflare']
