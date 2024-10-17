@@ -3,7 +3,7 @@
 Cloudflare CLI tutor is an interactive learning tool to help new users understand Cloudflare Development Platform tools and concepts.
 
 ## Prerequisites
-cf-teach has the same prerequisites as Workers.
+cf-tutor has the same prerequisites as Workers.
 
 - Sign up for a Cloudflare account.
 - Install npm.
