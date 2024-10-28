@@ -72,7 +72,7 @@ export const c3Quiz: Quiz = {
         },
         {
             
-            question: `\n${intro2} \n\nFirst we are going to create our Worker project. We will achieve this using C3 (create-cloudflare-cli). C3 is Cloudflare's CLI tool designed to create Cloudflare applications and set up scaffolding for different types of projects.\n\nType the following command in your terminal to install the package: \n\n ${c3command}\n\nAfter running this command, for the purposes of this tutorial you want to enter the following options:\n\n 1. Directory name: cli-tutorial-worker\n 2. Select Hello World Worker\n 3. Select JavaScript\n 4. Select no to connecting to Github\n 5. Select no to Deploying\n\n`,
+            question: `\n${intro2} \n\nFirst we are going to create our Worker project. We will achieve this using C3 (create-cloudflare-cli). C3 is Cloudflare's CLI tool designed to create Cloudflare applications and set up scaffolding for different types of projects.\n\nType the following command in your terminal to install the package: \n\n ${c3command}\n\nAfter running this command, for the purposes of this tutorial you want to enter the following options:\n\n 1. Directory name: cli-tutorial-worker\n 2. Category: Hello World example\n 3. Template: Hello World Worker\n 4. Language: JavaScript\n 5. Select no to deploying\n\n`,
             type: 'text',
             correctAnswer: 'npm create cloudflare',
             npmCommand: ['npm', 'create', 'cloudflare'],
@@ -103,7 +103,7 @@ export const c3Quiz: Quiz = {
         }
         ,
         {
-            question: `\n${intro6}\n\nOnce you're happy with the result you can then deploy your Worker to be available globally on the cloud. To do this, enter ${wranglerDeploy}'.\n\n`,
+            question: `\n${intro6}\n\nOnce you're happy with the result you can then deploy your Worker to be available globally on the cloud. To do this, enter ${wranglerDeploy}\n\n`,
             type: 'text',
             correctAnswer: 'npx wrangler deploy',
             npmCommand: ['npx', 'wrangler', 'deploy']

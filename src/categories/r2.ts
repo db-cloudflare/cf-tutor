@@ -171,28 +171,28 @@ export const r2Quiz: Quiz = {
             \n\n - What is R2?
             \n - How to create a R2 bucket through a CLI
             \n - How to query the R2 bucket using a Worker
-            \n\nTo get started, press 'enter'\n\n`,
+            \n\nTo get started, press 'Enter'\n\n`,
             type: 'text',
             correctAnswer: ''
         },
         {
-            question: `\n${Intro1}\n\nCloudflare R2 Storage allows developers to store large amounts of unstructured data without the costly egress bandwidth fees associated with typical cloud storage services.\n\nExamples of large, unstructured data that can be stored with R2 include:\n\n- Storage for cloud-native applications\n- Cloud storage for web content\n- Storage for images, videos and audio\n- Data lakes (analytics and big data)\n- Cloud storage output for large batch processes\n\nPress 'enter' to continue.\n\n`,
+            question: `\n${Intro1}\n\nCloudflare R2 Storage allows developers to store large amounts of unstructured data without the costly egress bandwidth fees associated with typical cloud storage services.\n\nExamples of large, unstructured data that can be stored with R2 include:\n\n- Storage for cloud-native applications\n- Cloud storage for web content\n- Storage for images, videos and audio\n- Data lakes (analytics and big data)\n- Cloud storage output for large batch processes\n\nPress 'Enter' to continue.\n\n`,
             type: 'text',
             correctAnswer: '',
         },
         {
-            question: `\n${Intro2}\n\nIn R2, files or objects are stored in what are called 'buckets'. Think of a bucket as a container for your files or objects.\n\nPress 'enter' to continue.\n\n`,
+            question: `\n${Intro2}\n\nIn R2, files or objects are stored in what are called 'buckets'. Think of a bucket as a container for your files or objects.\n\nPress 'Enter' to continue.\n\n`,
             type: 'text',
             correctAnswer: '',
         },
         {
             
-            question: `\n${Task}\n\nAubrey owns an e-commerce website that stocks a wide variety of products. Each product has its own set of high-resolution images to advertise them and Aubrey is running out of space to store them. Let's help aubrey create an R2 bucket to store her product media assest.\n\nPress enter to begin\n\n`,
+            question: `\n${Task}\n\nAubrey owns an e-commerce website that stocks a wide variety of products. Each product has its own set of high-resolution images to advertise them and Aubrey is running out of space to store them. Let's help aubrey create an R2 bucket to store her product media assest.\n\nPress 'Enter' to begin\n\n`,
             type: 'text',
             correctAnswer: '',
         },
         {
-            question: `\n${Intro3} \n\nTo do this, we will first create our Worker that will be used to query the R2 bucket. In this terminal below, enter the following to create your worker:\n${c3command}\nAfter running this command, for the purposes of this tutorial you want to select the following options:\n\n 1. Directory/application name: r2-cli-tutorial\n 2. Select Hello World Worker\n 3. Select JavaScript\n 4. Select no to connecting to Github\n 5. Select no to deploying\n\n`,
+            question: `\n${Intro3} \n\nTo do this, we will first create our Worker that will be used to query the R2 bucket. In this terminal below, enter the following to create your worker:\n${c3command}\nAfter running this command, for the purposes of this tutorial you want to select the following options:\n\n 1. Directory name: r2-cli-tutorial\n 2. Category: Hello World example\n 3. Template: Hello World Worker\n 4. Language: JavaScript\n 5. Select no to deploying\n\n`,
             type: 'text',
             correctAnswer: 'npm create cloudflare',
             npmCommand: ['npm', 'create', 'cloudflare']
@@ -217,14 +217,14 @@ export const r2Quiz: Quiz = {
         }
         ,
         {
-            question: `\n${Intro5}\n\nNow that you have created your R2 bucket above, we will need to bind our Worker and bucket together.\nA binding is a way of connecting Cloudflare resources together so that they can interact. By binding our Worker to the R2 bucket, they will be able to communicate with each other.\n\n In your terminal below, enter ${wranglerWhoami} to get your account ID. This is necessary for an R2 binding.\n\n`,
+            question: `\n${Intro5}\n\nNow that you have created your R2 bucket above, we will need to bind our Worker and bucket together.\nA binding is a way of connecting Cloudflare resources together so that they can interact. By binding our Worker to the R2 bucket, they will be able to communicate with each other.\n\n In your terminal below, enter the command below to get your account ID. This will be necessary to connect our Worker with our R2 bucket.\n\n${wranglerWhoami} \n\n`,
             type: 'text',
             correctAnswer: 'npx wrangler whoami',
             npmCommand: ['npx', 'wrangler', 'whoami']
         }
         ,
         {
-            question: `\n\nAbove you should now have recieved account IDs for any accounts you have access to. Select the account ID of the account you created your R2 bucket with and copy it. Next, open your IDE and navigate to the cf-tutor/r2-cli-tutorial/wrangler.toml file. Copy and place the account details at the top of your file into the 'account_id' variable and add the 'workers_dev = true' variable below it. Below is an example of how this should look like:\n\n${accountIdExample}\nWhen you have completed this task, type 'done'\n\n`,
+            question: `\n\nAbove you should have recieved account IDs for any accounts you have access to. Select the account ID of the account you created your R2 bucket with and copy it. Next, open your IDE and navigate to the cf-tutor/r2-cli-tutorial/wrangler.toml file. Copy and place the account details at the top of your file into the 'account_id' variable and add the 'workers_dev = true' variable below it. Below is an example of how this should look like:\n\n${accountIdExample}\nWhen you have completed this task, type 'done'\n\n`,
             type: 'text',
             correctAnswer: 'done',
         }
@@ -250,13 +250,13 @@ export const r2Quiz: Quiz = {
         }
         ,
         {
-            question: `\n${Intro7}\nNow that we have a working R2 bucket, let's expand the Worker we created earlier so that it can do the following.\n\n 1. Upload objects.\n\n 2. Retrieve objects.\n\n 3. Delete objects.\n\n 4. Only allow those with authorization to perform the above tasks,.\n\n \n\nPress 'enter' when you're ready to begin.\n\n`,
+            question: `\n${Intro7}\nNow that we have a working R2 bucket, let's expand the Worker we created earlier so that it can do the following.\n\n 1. Upload objects.\n\n 2. Retrieve objects.\n\n 3. Delete objects.\n\n 4. Only allow those with authorization to perform the above tasks,.\n\n \n\nPress 'Enter' when you're ready to begin.\n\n`,
             type: 'text',
             correctAnswer: '',
         }
         ,
         {
-            question: `\nNavigate to your IDE and open the cf-tutor/r2-cli-tutorial/src/index.ts file to access your new worker's script file. We have placed the skeleton of what we will be performing in this script along with comments on what we will be adding. To give this Worker multiple functions we will be making use of case switching.\n\n \n\nPress 'enter' when you're ready to begin.\n\n`,
+            question: `\nNavigate to your IDE and open the cf-tutor/r2-cli-tutorial/src/index.js file to access your new worker's script file. We have placed the skeleton of what we will be performing in this script along with comments on what we will be adding. To give this Worker multiple functions we will be making use of case switching.\n\n \n\nPress 'Enter' when you're ready to begin.\n\n`,
             type: 'text',
             correctAnswer: '',
         }
@@ -330,7 +330,7 @@ export const r2Quiz: Quiz = {
         }
         ,
         {
-            question: `\n${Intro9}\n\nGreat Job! This concludes the intro to R2. To test your Worker, do the following:\n\n 1. Press 'Enter' to exit this quiz.\n 2. Get the URL to access your Worker that was provided above after deploying your worker\n 3. Place your deployed worker's url path and your secret auth key where applicabe into the following curl commands, then enter them into this command terminal:\n\nWrite an object without the secret, resulting in an error message being returned\ncurl https://*YOUR_WORKER_HERE*/stereo2.jpg -X PUT --data-binary @filepath/to/image.jpg\n\nWrite an object\ncurl https://*YOUR_WORKER_HERE*/image.jpg -X PUT --header "X-Custom-Auth-Key: *YOUR_SECRET_KEY*" --data-binary @filepath/to/image.jpg\n\nDownload an object\ncurl -o stereo-downloaded.jpg https://*YOUR_WORKER_HERE*/stereo.jpg --header "X-Custom-Auth-Key: *YOUR_SECRET_KEY*"\n\n To learn more about D1, visit our documentation here: https://developers.cloudflare.com/r2/\nPress 'Enter' to exit this quiz "
+            question: `\n${Intro9}\n\nGreat Job! This concludes the intro to R2. To test your Worker, do the following:\n\n 1. Press 'Enter' to exit this quiz.\n 2. Get the URL to access your Worker that was provided above after deploying your worker\n 3. Place your deployed worker's url path and your secret auth key where applicabe into the following cURL commands, then enter them into this command terminal:\n\nWrite an object without the secret, resulting in an error message being returned\ncurl https://*YOUR_WORKER_HERE*/stereo2.jpg -X PUT --data-binary @filepath/to/image.jpg\n\nWrite an object\ncurl https://*YOUR_WORKER_HERE*/image.jpg -X PUT --header "X-Custom-Auth-Key: *YOUR_SECRET_KEY*" --data-binary @filepath/to/image.jpg\n\nDownload an object\ncurl -o stereo-downloaded.jpg https://*YOUR_WORKER_HERE*/stereo.jpg --header "X-Custom-Auth-Key: *YOUR_SECRET_KEY*"\n\n To learn more about D1, visit our documentation here: https://developers.cloudflare.com/r2/\nPress 'Enter' to exit this quiz "
             `,
             type: 'text',
             correctAnswer: ''
