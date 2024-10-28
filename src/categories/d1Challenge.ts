@@ -22,7 +22,7 @@ export const d1Challenge: Quiz = {
     category: 'Create a Worker that can join two D1 database tables',
     questions: [
         {
-            question: `\n${intro}\n\n For this challenge, please open up the folder cf-tutor/challenge_files/d1_challenge. The files required to complete this challenge are located there.\n\nPress Enter to continue\n\n`,
+            question: `\n${intro}\n\n For this challenge, please open up the folder cloudflare-tutor/challenge_files/d1_challenge. The files required to complete this challenge are located there.\n\nPress Enter to continue\n\n`,
             type: 'text',
             correctAnswer: '',
         }

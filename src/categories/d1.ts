@@ -142,7 +142,7 @@ export const d1Quiz: Quiz = {
         }
         ,
         {
-            question: `\n${intro4}\n\nNow that you have created your D1 database above, you should have recieved an output that contains the array [[d1_databases]] followed by a binding variable, database_name variable and database_id variable. These details are used to establish a binding.\nA binding is a way of connecting Cloudflare resources together so that they can interact. By binding our Worker to the D1 database, they will be able to communicate with each other.\n\n In your IDE (Integrated Development Environment), Navigate to your wrangler.toml file which should be located at cf-tutor/d1-cli-tutorial/wrangler.toml and copy and paste the binding details that were outputted above into the file. The wrangler.toml file should already contain comments as examples for what a binding should look like and where the D1 binding should go.\n\nWhen you have completed this task, type 'done'\n\n`,
+            question: `\n${intro4}\n\nNow that you have created your D1 database above, you should have recieved an output that contains the array [[d1_databases]] followed by a binding variable, database_name variable and database_id variable. These details are used to establish a binding.\nA binding is a way of connecting Cloudflare resources together so that they can interact. By binding our Worker to the D1 database, they will be able to communicate with each other.\n\n In your IDE (Integrated Development Environment), Navigate to your wrangler.toml file which should be located at cloudflare-tutor/d1-cli-tutorial/wrangler.toml and copy and paste the binding details that were outputted above into the file. The wrangler.toml file should already contain comments as examples for what a binding should look like and where the D1 binding should go.\n\nWhen you have completed this task, type 'done'\n\n`,
             type: 'text',
             correctAnswer: 'done',
         }
@@ -154,7 +154,7 @@ export const d1Quiz: Quiz = {
         }
         ,
         {
-            question: `\nTo create a table, we must first create a schema.sql file. This file will contain the SQL command that we will run to create the table and the data types that it will contain.\n\n 1. Open the cf-tutor folder in your IDE. \n\n 2. Under the d1-cli-tutorial folder, create a new file called schema.sql. \n\n 3. Paste the SQL query below into your schema file.\n\n ${schemaCodeBlock}\n\n This SQL query creates a table called records, containing two albums.\n\nType 'done' when you have completed this task.\n\n`,
+            question: `\nTo create a table, we must first create a schema.sql file. This file will contain the SQL command that we will run to create the table and the data types that it will contain.\n\n 1. Open the cloudflare-tutor folder in your IDE. \n\n 2. Under the d1-cli-tutorial folder, create a new file called schema.sql. \n\n 3. Paste the SQL query below into your schema file.\n\n ${schemaCodeBlock}\n\n This SQL query creates a table called records, containing two albums.\n\nType 'done' when you have completed this task.\n\n`,
             type: 'text',
             correctAnswer: 'done',
         }
@@ -174,7 +174,7 @@ export const d1Quiz: Quiz = {
         }
         ,
         {
-            question: `\n${intro7}\n\nNext, let's expand our Worker so that it can query the database for us. Let's try and make this Worker capable of querying select bands depending on the URL path that the Worker is accessed with.\n\nWe'll go through this step by step.\n\n 1. Go to your IDE and navigate to the cf-tutor/d1-cli-tutorial/src folder.\n 2. Open the index.ts file and delete everything in it\n 3. Copy and paste the below code block into it.\n\nThese lines of script establish the D1 binding in this file so that we can refer to it in functions.\n\n ${workerCodeBlock1}\n\nType 'done' when you are finished\n\n`,
+            question: `\n${intro7}\n\nNext, let's expand our Worker so that it can query the database for us. Let's try and make this Worker capable of querying select bands depending on the URL path that the Worker is accessed with.\n\nWe'll go through this step by step.\n\n 1. Go to your IDE and navigate to the cloudflare-tutor/d1-cli-tutorial/src folder.\n 2. Open the index.ts file and delete everything in it\n 3. Copy and paste the below code block into it.\n\nThese lines of script establish the D1 binding in this file so that we can refer to it in functions.\n\n ${workerCodeBlock1}\n\nType 'done' when you are finished\n\n`,
             type: 'text',
             correctAnswer: 'done',
         }
