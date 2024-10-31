@@ -3,7 +3,7 @@ import { spawn } from 'cross-spawn';
 import readline from 'readline';
 import path from 'path';
 
-// challengeUtils is used for challenges scripts to allow the user to continue using the command line as a subprocess within the cf-tutor app. The user can work on the challenge, and once the expected output has been detected the challenge is marked complete.
+// challengeUtils is used for challenges scripts to allow the user to continue using the command line as a subprocess within the cloudflare-tutor app. The user can work on the challenge, and once the expected output has been detected the challenge is marked complete.
 function hasErrorCode(err: any): err is { code: string } {
     return err && typeof err === 'object' && 'code' in err;
 }

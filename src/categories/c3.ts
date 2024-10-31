@@ -90,7 +90,7 @@ export const c3Quiz: Quiz = {
             npmCommand: ['npx', 'wrangler', 'login']
         },
         {
-            question: `\nGreat! Now that the Worker has been created, you can open it in your Integrated Development Environment (IDE) or editing tool. Open the file under cf-tutor/cli-tutorial-worker/src/index.js in your development environment and change the string "Hello World!" to whatever you would like.\n${jsCodeBlock}\nType "done" and press Enter after you have added the code.\n\n`,
+            question: `\nGreat! Now that the Worker has been created, you can open it in your Integrated Development Environment (IDE) or editing tool. Open the file under cloudflare-tutor/cli-tutorial-worker/src/index.js in your development environment and change the string "Hello World!" to whatever you would like.\n${jsCodeBlock}\nType "done" and press Enter after you have added the code.\n\n`,
             type: 'text',
             correctAnswer: 'done',
         }

@@ -224,7 +224,7 @@ export const r2Quiz: Quiz = {
         }
         ,
         {
-            question: `\n\nAbove you should have recieved account IDs for any accounts you have access to. Select the account ID of the account you created your R2 bucket with and copy it. Next, open your IDE and navigate to the cf-tutor/r2-cli-tutorial/wrangler.toml file. Copy and place the account details at the top of your file into the 'account_id' variable and add the 'workers_dev = true' variable below it. Below is an example of how this should look like:\n\n${accountIdExample}\nWhen you have completed this task, type 'done'\n\n`,
+            question: `\n\nAbove you should have recieved account IDs for any accounts you have access to. Select the account ID of the account you created your R2 bucket with and copy it. Next, open your IDE and navigate to the cloudflare-tutor/r2-cli-tutorial/wrangler.toml file. Copy and place the account details at the top of your file into the 'account_id' variable and add the 'workers_dev = true' variable below it. Below is an example of how this should look like:\n\n${accountIdExample}\nWhen you have completed this task, type 'done'\n\n`,
             type: 'text',
             correctAnswer: 'done',
         }
@@ -236,7 +236,7 @@ export const r2Quiz: Quiz = {
         }
         ,
         {
-            question: `\n${Intro6}\n\nOur Worker and our R2 bucket are now connected. Let's test that our R2 bucket works by uploading an object to our R2 bucket directly from this CLI without using our Worker first. One of Aubrey's product images can be found in the cf-tutor/media folder. We'll upload this image, then download it again with a different name to test the R2 bucket.\n\nTo upload the image, run the following command in this terminal below\n${r2UploadFile}\n\n`,
+            question: `\n${Intro6}\n\nOur Worker and our R2 bucket are now connected. Let's test that our R2 bucket works by uploading an object to our R2 bucket directly from this CLI without using our Worker first. One of Aubrey's product images can be found in the cloudflare-tutor/media folder. We'll upload this image, then download it again with a different name to test the R2 bucket.\n\nTo upload the image, run the following command in this terminal below\n${r2UploadFile}\n\n`,
             type: 'text',
             correctAnswer: 'npx wrangler r2 object put product-media-bucket/stereo.jpg --file=../media/stereo.jpg',
             npmCommand: ['npx', 'wrangler', 'r2', 'object', 'put', 'product-media-bucket/stereo.jpg', '--file=../media/stereo.jpg']
@@ -256,7 +256,7 @@ export const r2Quiz: Quiz = {
         }
         ,
         {
-            question: `\nNavigate to your IDE and open the cf-tutor/r2-cli-tutorial/src/index.js file to access your new worker's script file. We have placed the skeleton of what we will be performing in this script along with comments on what we will be adding. To give this Worker multiple functions we will be making use of case switching.\n\n \n\nPress 'Enter' when you're ready to begin.\n\n`,
+            question: `\nNavigate to your IDE and open the cloudflare-tutor/r2-cli-tutorial/src/index.js file to access your new worker's script file. We have placed the skeleton of what we will be performing in this script along with comments on what we will be adding. To give this Worker multiple functions we will be making use of case switching.\n\n \n\nPress 'Enter' when you're ready to begin.\n\n`,
             type: 'text',
             correctAnswer: '',
         }
