@@ -44,6 +44,13 @@ const isQuizCompleted = (category: string): boolean => {
 const countProgressFiles = async (): Promise<number> => {
     try {
         const progressDir = path.resolve(__dirname, './progress');
+        // Check if the progress directory exists, and create it if it doesn't
+        try {
+            await fs.promises.access(progressDir);
+        } catch {
+            await fs.promises.mkdir(progressDir);
+        }
+        
         const files = await fs.promises.readdir(progressDir);
         return files.length;
     } catch (error) {
