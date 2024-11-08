@@ -6,8 +6,8 @@ Cloudflare CLI tutor is an interactive learning tool to help new developers unde
 cloudflare-tutor has the same prerequisites as Workers.
 
 - Sign up for a Cloudflare account.
-- Install npm.
-- Install Node.js.
+- Install [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+- Install a node version package manager, such as [nvm](https://github.com/nvm-sh/nvm) or [volta](https://volta.sh/).
 
 ## Setup
 - Clone the cloudflare-tutor application or download and extract the the latest released [cloudflare-tutor.zip file on your browser](https://github.com/db-cloudflare/cloudflare-tutor/releases/tag/v1-beta).
