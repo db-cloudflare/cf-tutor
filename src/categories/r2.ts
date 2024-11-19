@@ -164,7 +164,7 @@ ${chalk.blue('npx wrangler secret put AUTH_KEY_SECRET')}
 `;
 
 export const r2Quiz: Quiz = {
-    category: 'Intro to R2',
+    category: 'Store unstructured data with R2',
     questions: [
         {
             question: `\n${Intro}\n\nIn this walkthrough, you will learn the following:

@@ -1,4 +1,9 @@
 import inquirer from 'inquirer';
+import chalk from 'chalk';
+
+const Error = `
+${chalk.hex('##F28C28').bold('Your input was incorrect. Please try again.')}
+`;
 
 // Interface representing a quiz question
 export interface Question {
@@ -74,7 +79,7 @@ export const startQuestion = async (question: Question): Promise<boolean> => {
             //console.log('Correct!');
             isCorrect = true;
         } else {
-            console.log(`Your input was incorrect. Please try again.`);
+            console.log(Error);
         }
     }
     return true;
