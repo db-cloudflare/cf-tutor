@@ -17,7 +17,7 @@ ${chalk.hex('##F28C28').bold('Welcome to the Cloudflare CLI Tutor!')}
 `;
 
 const exp = `
-${chalk.hex('##50C878').bold('Experience level: ')}
+${chalk.hex('##50C878').bold('Number of tutorials and challenges completed: ')}
 `;
 
 const __dirname = path.resolve();
@@ -72,9 +72,9 @@ const selectQuizCategory = async (): Promise<Quiz | undefined> => {
     });
 
     const choices = [
-        new inquirer.Separator('--- Introductions ---'),
+        new inquirer.Separator('\n--- Learn more about Cloudflare ---'),
         ...quizChoices,
-        new inquirer.Separator('--- Challenges ---'),
+        new inquirer.Separator('\n--- Challenge your Cloudflare knowledge ---'),
         ...challengeChoices,
     ];
 
@@ -110,11 +110,11 @@ const run = async () => {
         // Handle specific categories differently
         if (quiz.category === 'Intro to Workers, C3 and Wrangler') {
             await handleC3Quiz();
-        } else if (quiz.category === 'Intro to D1') {
+        } else if (quiz.category === 'Store relational data with D1') {
             await handleD1Quiz();
-        } else if (quiz.category === 'Intro to R2') {
+        } else if (quiz.category === 'Store unstructured data with R2') {
             await handleR2Quiz();
-        } else if (quiz.category === 'Intro to Workers AI') {
+        } else if (quiz.category === 'Build AI tools with Workers AI') {
             await handleAIQuiz();
         } else if (quiz.category === 'Create a basic Worker') {
             await handleChallenge();

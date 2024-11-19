@@ -99,7 +99,7 @@ ${chalk.blue('npx wrangler dev')}
 `;
 
 export const d1Quiz: Quiz = {
-    category: 'Intro to D1',
+    category: 'Store relational data with D1',
     questions: [
         {
             question: `\n${intro}\n\nIn this walkthrough, you will learn the following: \n\n - What is D1? \n\n - How to create a D1 database through a CLI \n\n - How to query the D1 database using a Worker \n\nTo get started, press 'Enter'\n\n`,

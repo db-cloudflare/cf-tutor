@@ -1,6 +1,15 @@
 import { Question } from '../quiz';
 import spawn from 'cross-spawn';
 import inquirer from 'inquirer';
+import chalk from 'chalk';
+
+const Error1 = `
+${chalk.hex('#D22B2B').bold('Invalid input. Please type')}
+`;
+
+const Error2 = `
+${chalk.hex('#D22B2B').bold('and press enter to run the command.')}
+`;
 
 // Function to handle npm tasks and commands as part of an answer to an assigned task.
 export const handleNpmCommands = async (question: Question) => {
@@ -60,7 +69,9 @@ export const handleNpmCommands = async (question: Question) => {
                 prefix: '\n-------------------------------------------------------------\n',
                 type: 'input',
                 name: 'answer',
-                message: `[${currentDir}]\n${question.question}`
+                message: `[${currentDir}]\n${question.question}`,
+                transformer: (input: string) => `$ ${input}`
+
             }
         ]);
 
@@ -85,7 +96,7 @@ export const handleNpmCommands = async (question: Question) => {
                 isCorrect = true; // Move on to the next question since there's no command to run
             }
         } else {
-            console.log(`Invalid input. Please type '${question.correctAnswer}' after you have run the command.`);
+            console.log(`${Error1}${question.correctAnswer}${Error2}`);
         }
     }
 };

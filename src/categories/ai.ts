@@ -85,7 +85,7 @@ ${chalk.blue('npx wrangler dev')}
 `;
 
 export const aiQuiz: Quiz = {
-    category: 'Intro to Workers AI',
+    category: 'Build AI tools with Workers AI',
     questions: [
         {
             question: `\n${intro}\n\nIn this walkthrough, you will learn the following: \n\n - What is Workers AI? \n\n - How to create a D1 database through a CLI \n\n - How to query the D1 database using a Worker \n\nTo get started, press 'Enter'\n\n`,
